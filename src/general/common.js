@@ -109,7 +109,10 @@ module.exports.allies = {
   "15th Infantry": true,
   "2e Blindee": true,
   "Armia Krajowa": true,
-  "1st Polish Infantry": true
+  "1st Polish Infantry": true,
+  "358 Strelkovy": true,
+  "126th Strelki": true,
+  "Gruppa Vyborg": true
 };
 
 module.exports.axis = {
@@ -124,12 +127,15 @@ module.exports.axis = {
   "12th Tartalekos": true,
   "21st Panzer": true,
   "Pz Lehr": true,
-  "116 Panzer": true,
+  "116th Panzer": true,
   "352 Infantry": true,
-  "1 Skijager": true,
+  "1st Skijager": true,
   "5 Panzer Wiking": true,
   "Fallschrim Panzer H G": true,
-  "25th Panzergrenadier": true
+  "25th Panzergrenadier": true,
+  "112. Infantry": true,
+  Panssaridivisioona: true,
+  "Ryhma Raapppana": true
 };
 
 module.exports.maps1v1 = {
