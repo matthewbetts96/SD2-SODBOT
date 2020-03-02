@@ -2,8 +2,6 @@ const common = require("./common");
 const config = require("../config");
 const helpCmd = require("./help-embeds");
 const AsciiTable = require("ascii-table");
-const fetch = require("node-fetch");
-const fileType = require("file-type");
 
 const sodbotReplies = [
   "hit! Target destroyed!",
@@ -103,19 +101,6 @@ module.exports.help = async (message, input) => {
         }
       });
   }
-};
-
-module.exports.template = message => {
-  message.channel.send(
-    "Minimum results submission:\n```" +
-      config.prefix +
-      "results\nDraw: No\nWinner:\nLoser:\nMap:\n--------\nP1 Name:\nP1 Div:\n--------\nP2 Name:\nP2 Div:```"
-  );
-  message.channel.send(
-    "Minimum draw submission:\n```" +
-      config.prefix +
-      "results\nDraw: Yes\nMap:\n--------\nP1 Name:\nP1 Div:\n--------\nP2 Name:\nP2 Div:```"
-  );
 };
 
 module.exports.piat = message => {

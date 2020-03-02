@@ -7,6 +7,7 @@ const map = require("./general/map-functions");
 const div = require("./general/division-functions");
 const results = require("./results/results-main");
 const extract = require("./results/replayParser");
+const register = require("./results/registerUser");
 
 const token = config.token;
 const bot = new Discord.Client();
@@ -52,6 +53,16 @@ function findCommand(message, command) {
         ? admin.listAdmins(message)
         : common.moduleDisabledMsg(message, "admin");
       break;
+    // case "register-user":
+    //   config.adminCommands
+    //     ? results.registerUser(message, input[0])
+    //     : common.moduleDisabledMsg(message, "results");
+    //   break;
+    // case "register-override":
+    //   config.adminCommands
+    //     ? results.overrideUser(message, input[0])
+    //     : common.moduleDisabledMsg(message, "results");
+    //   break;
 
     // Misc functions
     case "help":
@@ -103,14 +114,8 @@ function findCommand(message, command) {
       break;
     case "register":
       config.register
-        ? results.registerUser(message, input[0])
+        ? register.registerUser(message, input[0])
         : common.moduleDisabledMsg(message, "results");
-      break;
-
-    case "template":
-      message.channel.send(
-        "Template depreciated. Please just drag and drop the replays to the correct channel."
-      );
       break;
     // Map functions
     case "rmap":

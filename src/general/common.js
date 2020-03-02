@@ -136,20 +136,22 @@ module.exports.maps1v1 = {
   Bobr: true,
   Haroshaje: true,
   Krupa: true,
-  Lenina1: true,
+  Lenina: true,
   Orsha_East: true,
   Orsha_North: true,
-  Ostrowno1: true,
-  Shchedrin1: true,
+  Ostrowno: true,
+  Shchedrin: true,
   Sianno: true,
   Slutsk_East: true,
   Slutsk_West: true,
-  Slutsk1: true,
+  Slutsk: true,
   Tsel: true,
   Siedlce: true,
   Brest_West: true,
   Gora_Kalwaria: true,
-  Zbuczyn: true
+  Zbuczyn: true,
+  Tali_Ihantala: true,
+  Ilomantsi: true
 };
 
 module.exports.maps2v2 = {
@@ -166,7 +168,9 @@ module.exports.maps2v2 = {
   Vitebsk_East: true,
   Siedlce2: true,
   Brest_West2: true,
-  Zbuczyn2: true
+  Zbuczyn2: true,
+  Tali_Ihantala2: true,
+  Ilomantsi2: true
 };
 
 module.exports.maps3v3 = {

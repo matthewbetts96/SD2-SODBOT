@@ -14,6 +14,13 @@ module.exports.rdiv = rdiv = (message, input, isRandom) => {
   const notBannedList = Object.keys(divs).filter(x => {
     return divs[x];
   });
+  if (!notBannedList.length) {
+    common.reply(
+      message,
+      "all divisions for this side are banned. Cannot random."
+    );
+    return;
+  }
   const rndDiv = Math.floor(Math.random() * notBannedList.length);
   if (isRandom) {
     return notBannedList[rndDiv];
@@ -41,9 +48,7 @@ module.exports.banning_unbanningDivs = (message, msgInput, unbanBool) => {
       if (msgInput[index] === `${config.prefix}bandiv`) {
         common.say(
           message,
-          `I don't know what that division is, please use ${
-            config.prefix
-          }alldivs, to get the list of divisions.`
+          `I don't know what that division is, please use ${config.prefix}alldivs, to get the list of divisions.`
         );
       } else {
         common.say(
