@@ -225,13 +225,11 @@ async function addToDb(
       console.log("Error in map update", err);
     });
   } else {
-    await common
-      .sql("UPDATE divResults SET Wins = Wins + 1 WHERE Name = ?", [
-        player2Division
-      ])
-      .catch(err => {
-        console.log("Error in map update", err);
-      });
+    await sql("UPDATE divResults SET Wins = Wins + 1 WHERE Name = ?", [
+      player2Division
+    ]).catch(err => {
+      console.log("Error in map update", err);
+    });
     await sql("UPDATE divResults SET Losses = Losses + 1 WHERE Name = ?", [
       player1Division
     ]).catch(err => {
