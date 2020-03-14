@@ -8,6 +8,7 @@ const div = require("./general/division-functions");
 const results = require("./results/results-main");
 const extract = require("./results/replayParser");
 const register = require("./results/registerUser");
+const { createTables } = require("./init");
 
 const token = config.token;
 const bot = new Discord.Client();
@@ -230,7 +231,7 @@ bot.on("ready", async () => {
   try {
     await common.sql(`SELECT * FROM players`);
   } catch (err) {
-    admin.createTables();
+    createTables();
   }
 });
 
