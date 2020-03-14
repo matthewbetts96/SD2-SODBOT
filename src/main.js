@@ -228,11 +228,7 @@ bot.on("ready", async () => {
   bot.user.setActivity("Use " + config.prefix + "help to see commands!", {
     type: "Listening"
   });
-  try {
-    await common.sql(`SELECT * FROM players`);
-  } catch (err) {
-    createTables();
-  }
+  createTables();
 });
 
 bot.on("error", console.error);
