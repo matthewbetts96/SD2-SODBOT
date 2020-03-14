@@ -55,7 +55,7 @@ const axisDivs = {
   "100001101": "25th Panzergrenadier",
   "100000110": "5 Panzer Wiking",
   "100000111": "Fallschrim Panzer H G",
-  "101100100": "112. Infantry",
+  "101100100": "122 Infantry",
   "101011110": "Panssaridivisioona",
   "101100010": "Ryhma Raapppana"
 };
